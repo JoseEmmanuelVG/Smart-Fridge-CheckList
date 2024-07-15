@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="GestionHotel 2021.09.17 15-16-34">
+  <ClassDiagramComponents>
+    <Class name="Hotel" package="" visibility="public" xPosition="54.0" yPosition="74.0">
+      <Fields>
+        <Field name="Clientes" type="Object" visibility="private"/>
+        <Field name="Habitaciones" type="Object" visibility="private"/>
+        <Field name="Reservaciones" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addClienteHotel" returnType="ClienteHotel" visibility="public">
+          <Argument type="ClienteHotel" name="C"/>
+        </Method>
+        <Method name="sizeClienteHotel" returnType="int" visibility="public"/>
+        <Method name="getClienteHotel" returnType="int" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+        <Method name="addHabitacionHotel" returnType="HabitacionHotel" visibility="public">
+          <Argument type="HabitacionHotel" name="C"/>
+        </Method>
+        <Method name="sizeHabitacionHotel" returnType="int" visibility="public"/>
+        <Method name="getHabitacionHotel" returnType="int" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="addReservacionHotel" returnType="ReservacionHotel" visibility="public">
+          <Argument type="ReservacionHotel" name="C"/>
+        </Method>
+        <Method name="sizeReservacionHotel" returnType="int" visibility="public"/>
+        <Method name="getReservacionHotel" returnType="int" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="removeReservacionHotel" returnType="int" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="checkIn" returnType="ReservacionHotel" visibility="public">
+          <Argument type="ReservacionHotel" name="R"/>
+        </Method>
+        <Method name="checkOut" returnType="ReservacionHotel" visibility="public">
+          <Argument type="ReservacionHotel" name="R"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="HotelV2" package="" visibility="public" xPosition="594.0" yPosition="83.0">
+      <Fields>
+        <Field name="Servicio" type="Object" visibility="private"/>
+        <Field name="Inquilino" type="Object" visibility="private"/>
+        <Field name="TiposCama" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addServicio" returnType="void" visibility="public">
+          <Argument type="Servicio" name="S"/>
+        </Method>
+        <Method name="sizeServicio" returnType="int" visibility="public"/>
+        <Method name="removeServicio" returnType="boolean" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="getServicio" returnType="void" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="addInquilino" returnType="void" visibility="public">
+          <Argument type="Inquilino" name="i"/>
+        </Method>
+        <Method name="sizeInquilino" returnType="int" visibility="public"/>
+        <Method name="getInquilino" returnType="void" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="removeInquilino" returnType="boolean" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="addCama" returnType="void" visibility="public">
+          <Argument type="TipoCama" name="c"/>
+        </Method>
+        <Method name="sizeCama" returnType="int" visibility="public"/>
+        <Method name="getCama" returnType="void" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="removeCama" returnType="boolean" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Hereda" source="Hotel" target="HotelV2" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

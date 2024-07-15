@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="GestionHotel 2021.09.10 15-30-29">
+  <ClassDiagramComponents>
+    <Class name="Habitacion " package="" visibility="public" xPosition="407.0" yPosition="197.0">
+      <Fields>
+        <Field name="NumCamas" type="int" visibility="private"/>
+        <Field name="IDCuarto" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setNumCamas" returnType="int" visibility="public">
+          <Argument type="int" name="NumCamas"/>
+        </Method>
+        <Method name="getNumCamas" returnType="int" visibility="public"/>
+        <Method name="setIDCuarto" returnType="int" visibility="public">
+          <Argument type="int" name="IDCuarto"/>
+        </Method>
+        <Method name="getIDCuarto" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="HabtacionResidente" package="" visibility="public" xPosition="753.0" yPosition="13.0">
+      <Fields>
+        <Field name="Inquilinos" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="HabitacionResidente" returnType="void" visibility="public"/>
+        <Method name="addInquilino" returnType="Inquilino" visibility="public">
+          <Argument type="Inquilino" name="S"/>
+        </Method>
+        <Method name="getNumServicios" returnType="int" visibility="public"/>
+        <Method name="getInquilino" returnType="int" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="removeInquilino" returnType="int" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="HabitacionSuite" package="" visibility="public" xPosition="753.0" yPosition="213.0">
+      <Fields>
+        <Field name="Servicios" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="HabitacionSuite" returnType="void" visibility="public"/>
+        <Method name="addServicio" returnType="Servicio" visibility="public">
+          <Argument type="Servicio" name="S"/>
+        </Method>
+        <Method name="getNumServicios" returnType="int" visibility="public"/>
+        <Method name="getServicio" returnType="int" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="removeServicio" returnType="int" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="HabitacionGrupal" package="" visibility="public" xPosition="753.0" yPosition="410.0">
+      <Fields>
+        <Field name="Camas" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addCamas" returnType="TipoCama" visibility="public">
+          <Argument type="TipoCama" name="i"/>
+        </Method>
+        <Method name="removeCamas" returnType="int" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="Habitacion " target="HabtacionResidente" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="tiene" source="Habitacion " target="HabitacionSuite" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="tiene" source="Habitacion " target="HabitacionGrupal" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
