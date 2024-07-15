@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="AgenciaApp_JEVG 2021.09.03 13-56-53">
+  <ClassDiagramComponents>
+    <Class name="Agencia" package="" visibility="public" xPosition="290.0" yPosition="16.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="addCliente" returnType="void" visibility="public">
+          <Argument type="Cliente" name="c"/>
+        </Method>
+        <Method name="removeCliente" returnType="void" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Cliente" package="" visibility="public" xPosition="246.0" yPosition="189.0">
+      <Fields>
+        <Field name="Nombre" type="String" visibility="private"/>
+        <Field name="Edad" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="Nombre"/>
+        </Method>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="Edad"/>
+        </Method>
+        <Method name="addCar" returnType="void" visibility="public">
+          <Argument type="Auto" name="e"/>
+        </Method>
+        <Method name="removeAuto" returnType="boolean" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Auto" package="" visibility="public" xPosition="642.0" yPosition="195.0">
+      <Fields>
+        <Field name="Modelo" type="String" visibility="private"/>
+        <Field name="Marca" type="String" visibility="private"/>
+        <Field name="anio" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setModelo" returnType="void" visibility="public">
+          <Argument type="String" name="Modelo"/>
+        </Method>
+        <Method name="setMarca" returnType="void" visibility="public">
+          <Argument type="String" name="Marca"/>
+        </Method>
+        <Method name="setAnio" returnType="void" visibility="public">
+          <Argument type="int" name="Anio"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="Agencia" target="Cliente" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="tiene" source="Cliente" target="Auto" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
